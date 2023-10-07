@@ -1,28 +1,37 @@
-import React from 'react'
+import React from 'react';
+import { footerQuickLinks } from '../data';
 
 const Footer = () => {
   return (
-    <div className="footer" style={{width: "100%", height: "600px", border: "2px solid black", padding: "75px 30px"}}>
-      <div className="footer-top" style={{border: "2px solid black", width: "100%", height: "300px", display: "flex", flexWarp: "wrap", justifyContent: 'space-around'}}>
-        <div className="footer-top-common footer-left" style={{flexBasis: "45%", border: "2px solid black"}}>
-          <h5 style={{borderBottom: "2px solid black", paddingBottom: "20px", marginBottom: "20px"}}>NEWSLATER</h5>
-          <p style={{border: "2px solid black", padding: "0", marginBottom: "15px"}}>Subscribe to be the first to hear about our latest collections, offers and news about the brand.</p>
-          <div style={{border: "2px solid black", display:"flex", flexWrap: "wrap"}}>
-            <input type="text" name="newslater" style={{}} />
-            <button style={{textAlign: "center", width: "70px", border: "2px solid yellow"}}>Join</button>
+    <div className="footer">
+
+      <div className="footer-top">
+        <div className="footer-left" style={{flexBasis: "48%"}}>
+          <h5 style={{borderBottom: "1px solid white", paddingBottom: "20px", marginBottom: "20px"}}>NEWSLATER</h5>
+          <p style={{padding: "0", marginBottom: "15px"}}>Subscribe to be the first to hear about our latest collections, offers and news about the brand.</p>
+          <div style={{border: "1px solid white", display:"flex", flexWrap: "wrap", borderRadius: "2px"}}>
+            <input type="text" name="newslater" style={{backgroundColor: "black", padding: "0.1em 0.7em"}} />
+            <button style={{textAlign: "center", width: "70px", backgroundColor: "white", border: "none"}}>Join</button>
           </div>
         </div>
-        <div className="footer-top-common footer-right" style={{flexBasis: "45%", border: "2px solid black"}}>
-          <h5 style={{borderBottom: "2px solid black", paddingBottom: "15px"}}>GET SOCIAL WITH US</h5>
-          <div style={{border: "2px solid blue", display: "flex", flexWrap: "wrap", height: "20px"}}>
-            <a href="#" style={{border: "2px solid green", marginLeft:"0", height: "100%"}}><img src="/images/facebook.png" style={{height: "100%"}} alt="..." /></a>
-            <a href="#" style={{border: "2px solid green", height: "100%"}}><img src="/images/Instagram.png" style={{height: "100%"}} alt="..." /></a>
-            <a href="#" style={{border: "2px solid green", height: "100%"}}><img src="/images/Twitter.png" style={{height: "100%"}} alt="..." /></a>
-            <a href="#" style={{border: "2px solid green", height: "100%"}}><img src="/images/Youtube.png" style={{height: "100%"}} alt="..." /></a>
+        <div className="footer-right" style={{flexBasis: "48%"}}>
+          <h5 style={{borderBottom:"1px solid white", paddingBottom: "20px", marginBottom: "20px"}}>GET SOCIAL WITH US</h5>
+          <div style={{display: "flex", flexWrap: "wrap"}}>
+            <a href="#" style={{marginLeft:"0"}}><i class="bi bi-facebook" style={{fontSize: "18px"}}></i></a>
+
+            <a href="#"><i class="bi bi-twitter" style={{fontSize: "18px"}}></i></a>
+
+            <a href="#"><i class="bi bi-instagram" style={{fontSize: "18px"}}></i></a>
+
+            <a href="#"><i class="bi bi-youtube" style={{fontSize: "18px"}}></i></a>
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
+
+      <div className="footer-bottom" style={{border: "2px solid black", display: "flex", flexWrap: "wrap", marginTop: "50px"}}>
+        {
+          footerQuickLinks.map((value, index)=> (index===0? <a key={index} href="#" style={{margin: "0 20px 0 0", fontSize: "14px", lineHeight: "30px"}}>&copy;&nbsp;{value}</a> : <a key={index} href="#" style={{margin: "0 20px 0 0", fontSize: "14px", lineHeight: "30px"}}>{value}</a>))
+        }
       </div>
     </div>
   )
