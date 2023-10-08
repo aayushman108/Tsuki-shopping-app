@@ -13,41 +13,77 @@ const Home = () => {
     <h2 className="main-heading">Shop Accessories</h2>
     <div className='accessories'>
       <div className="accessories-item">
-        <div className="accessories-image"><img src="https://tsuki.market/cdn/shop/products/CAP_BLACK_PINK_1_1296x.jpg?v=1665576057" alt="" style={{width:"100%", height: "100%"}} /></div>
-        <div className="item-description"></div>
+        <div className="sale-tag">SALE</div>
+        <div className="accessories-image">
+          <img src="https://tsuki.market/cdn/shop/products/CAP_BLACK_PINK_1_1296x.jpg?v=1665576057" alt="..." style={{width:"100%", height: "100%"}} />
+          <div className='quick-view'>QUICK VIEW</div>
+        </div>
+        <div className="item-description">
+          <h6>Tsuki Logo Embroidered Cap</h6>
+          <p>Sold Out</p>
+        </div>
       </div>
       <div className="accessories-item">
-        <div className='accessories-image'><img src="https://tsuki.market/cdn/shop/products/TSHIRT_PINK_1_720x.jpg?v=1663798932" alt="" style={{width:"100%", height: "100%"}} /></div>
-        <div className="item-description"></div>
+        <div className="sale-tag">SALE</div>
+        <div className='accessories-image'>
+          <img src="https://tsuki.market/cdn/shop/products/TSHIRT_PINK_1_720x.jpg?v=1663798932" alt="..." style={{width:"100%", height: "100%"}} />
+          <div className='quick-view'>QUICK VIEW</div>  
+        </div>
+        <div className="item-description">
+          <h6>Embroidered Logo T-Shirt</h6>
+          <p>Sold Out</p>
+        </div>
       </div>
       <div className="accessories-item">
-        <div className='accessories-image'><img src= "https://tsuki.market/cdn/shop/products/SOCKS_WHITE_1_1296x.jpg?v=1638976238" alt="" style={{width:"100%", height: "100%"}} /></div>
-        <div className="item-description"></div>
+        <div className="sale-tag">SALE</div>
+        <div className='accessories-image'>
+          <img src= "https://tsuki.market/cdn/shop/products/SOCKS_WHITE_1_1296x.jpg?v=1638976238" alt="..." style={{width:"100%", height: "100%"}} />
+          <div className='quick-view'>QUICK VIEW</div>
+        </div>
+        <div className="item-description">
+          <h6>Tsuki Socks</h6>
+          <p>Sold Out</p>
+        </div>
       </div>
     </div>
     <div className="accessories-carousel">
       <Carousel  infinite={true} responsive={responsive}>
-        <div>
+        <div className='accessories-carousel-item'>
+          <div className="sale-tag">SALE</div>
           <div className='accessories-carousel-image'>
             <img src="https://tsuki.market/cdn/shop/products/CAP_BLACK_PINK_1_1296x.jpg?v=1665576057" alt="" style={{width:"100%", height: "100%"}} />
+            <div className='quick-view'>QUICK VIEW</div>
           </div>
-          <div className='accessories-carousel-description'></div>
+          <div className='accessories-carousel-description'>
+            <h6>Tsuki Logo Embroidered Cap</h6>
+            <p>Sold Out</p>
+          </div>
         </div>
-        <div>
+        <div className='accessories-carousel-item'>
+          <div className="sale-tag">SALE</div>
           <div className='accessories-carousel-image'>
             <img src="https://tsuki.market/cdn/shop/products/TSHIRT_PINK_1_720x.jpg?v=1663798932" alt="" style={{width:"100%", height: "100%"}} />
+            <div className='quick-view'>QUICK VIEW</div>
           </div>
-          <div className='accessories-carousel-description'></div>
+          <div className='accessories-carousel-description'>
+            <h6>Embroidered Logo T-Shirt</h6>
+            <p>Sold Out</p>
+          </div>
         </div>
-        <div>
+        <div className='accessories-carousel-item'>
           <div className='accessories-carousel-image'>
+            <div className="sale-tag">SALE</div>
             <img src= "https://tsuki.market/cdn/shop/products/SOCKS_WHITE_1_1296x.jpg?v=1638976238" alt="" style={{width:"100%", height: "100%"}} />
+            <div className='quick-view'>QUICK VIEW</div>
           </div>
-          <div className='accessories-carousel-description'></div>
+          <div className='accessories-carousel-description'>
+            <h6>Tsuki Socks</h6>
+            <p>Sold Out</p>
+          </div>
         </div>
       </Carousel>;
     </div>
-    <div className="my-4">
+    <div style={{marginTop:"40px"}}>
       <Carousel  infinite={true} responsive={responsive}>
         <div className='carousel-item'>
           <h3>SHOP THE LOOK</h3>
@@ -57,8 +93,15 @@ const Home = () => {
           <div className="carousel-item-right">
             <h3>SHOP THE LOOK</h3>
             <div className="shop-the-look-item">
-              <div className="shop-the-look-image"><img src="https://tsuki.market/cdn/shop/products/TSHIRT_PINK_1_720x.jpg?v=1663798932" alt="" style={{width:"100%", height: "auto"}} /></div>
-              <div className="shop-the-look-description"></div>
+              <div className="shop-the-look-image">
+                <div className="sale-tag">SALE</div>
+                <img src="https://tsuki.market/cdn/shop/products/TSHIRT_PINK_1_720x.jpg?v=1663798932" alt="" style={{width:"100%", height: "auto"}} />
+                <div className='quick-view'>QUICK VIEW</div>
+              </div>
+              <div className="shop-the-look-description">
+                  <h6>Embroidered Logo T-Shirt</h6>
+                  <p>Sold Out</p>
+              </div>
             </div>
           </div>
         </div>
@@ -70,8 +113,15 @@ const Home = () => {
           <div className="carousel-item-right">
             <h3>SHOP THE LOOK</h3>
             <div className="shop-the-look-item">
-              <div className="shop-the-look-image"><img src="https://tsuki.market/cdn/shop/products/tmcorduroypants_720x.jpg?v=1638456234" alt="" style={{width:"100%", height: "auto"}} /></div>
-              <div className="shop-the-look-description"></div>
+              <div className="shop-the-look-image">
+                <div className="sale-tag">SALE</div>
+                <img src="https://tsuki.market/cdn/shop/products/tmcorduroypants_720x.jpg?v=1638456234" alt="" style={{width:"100%", height: "auto"}} />
+                <div className='quick-view'>QUICK VIEW</div>
+              </div>
+              <div className="shop-the-look-description">
+                <h6>Example Product Title</h6>
+                <p>$ 99.00 USD</p>
+              </div>
             </div>
           </div>
         </div>
@@ -83,8 +133,15 @@ const Home = () => {
           <div className="carousel-item-right">
             <h3>SHOP THE LOOK</h3>
             <div className="shop-the-look-item">
-              <div className="shop-the-look-image"><img src="https://tsuki.market/cdn/shop/products/CAP_BLACK_PINK_1_720x.jpg?v=1665576057" alt="" style={{width:"100%", height: "auto"}} /></div>
-              <div className="shop-the-look-description"></div>
+              <div className="shop-the-look-image">
+                <div className="sale-tag">SALE</div>
+                <img src="https://tsuki.market/cdn/shop/products/CAP_BLACK_PINK_1_720x.jpg?v=1665576057" alt="" style={{width:"100%", height: "auto"}} />
+                <div className='quick-view'>QUICK VIEW</div>
+              </div>
+              <div className="shop-the-look-description">
+                <h6>Example Product Title</h6>
+                <p>$ 99.00 USD</p>
+              </div>
             </div>
           </div>
         </div>
@@ -128,22 +185,22 @@ const Home = () => {
       <div className="feature-item">
         <div style={{flexBasis: "8%", textAlign:"center"}}><i class="bi bi-star-fill"></i></div>
         <div style={{flexBasis:"92%", paddingLeft:"5px"}}>
-          <p style={{margin:"2px", color: "white"}}>THOUGHTFULLY DESIGNED</p>
-          <p style={{color:"white", marginBottom:"20px"}}>We design apparel and homeware that feature creative, fun designs for the daring individual.</p>
+          <p style={{}}>THOUGHTFULLY DESIGNED</p>
+          <p style={{marginBottom:"20px"}}>We design apparel and homeware that feature creative, fun designs for the daring individual.</p>
         </div>
       </div>
       <div className="feature-item">
         <div style={{flexBasis: "8%", textAlign:"center"}}><i class="bi bi-tags-fill"></i></div>
         <div style={{flexBasis:"92%", paddingLeft:"5px"}}>
-          <p style={{margin:"2px", color: "white"}}>ETHICALLY SOURCED</p>
-          <p style={{color:"white", marginBottom:"20px"}}>We ensure that all our products are sourced responsibly and made from excellent quality materials.</p>
+          <p style={{}}>ETHICALLY SOURCED</p>
+          <p style={{marginBottom:"20px"}}>We ensure that all our products are sourced responsibly and made from excellent quality materials.</p>
         </div>
       </div>
       <div className="feature-item">
         <div style={{flexBasis: "8%", textAlign:"center"}}><i class="bi bi-chat-right-quote-fill"></i></div>
         <div style={{flexBasis:"92%", paddingLeft:"5px"}}>
-          <p style={{margin:"2px", color: "white"}}>GET IN TOUCH</p>
-          <p style={{color:"white", marginBottom:"20px"}}>Do you have any questions? Please get in touch with us at any time and we'll be happy to assist you</p>
+          <p style={{}}>GET IN TOUCH</p>
+          <p style={{marginBottom:"20px"}}>Do you have any questions? Please get in touch with us at any time and we'll be happy to assist you</p>
         </div>
       </div>
     </div>
