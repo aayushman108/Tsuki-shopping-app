@@ -2,9 +2,10 @@ import { Form, Formik } from 'formik';
 import React, {useEffect} from 'react'
 import Input from './Input';
 import * as Yup from 'yup';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate= useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,6 +20,7 @@ const Login = () => {
   });
   const onSubmit= (values) =>{ 
     alert(JSON.stringify(values, null, 2));
+    navigate('/');
   }
 
   return (
