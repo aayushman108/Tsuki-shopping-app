@@ -23,13 +23,13 @@ const Header = () => {
     <div className="header">
         <div className="left-menu">
             <NavLink to="" onClick={()=> setSearch(!search)}><i className="bi bi-search"></i></NavLink>
-            <NavLink to=""><i className="bi bi-person-fill"></i></NavLink>
+            <NavLink to="login"><i className="bi bi-person-fill"></i></NavLink>
         </div>
         <div>
             <h2 style={{}}>Logo</h2>
         </div>
         <div className="links">
-            <NavLink to=""><i className="bi bi-person-fill"></i></NavLink>
+            <NavLink to="login"><i className="bi bi-person-fill"></i></NavLink>
             <NavLink to="" onClick={()=> setSearch(!search)}><i className="bi bi-search"></i></NavLink>
             <NavLink to=""><i className="bi bi-cart-fill"></i></NavLink>
         </div>

@@ -777,7 +777,33 @@ input{
 
 
 
-
+/*Form*/
+.form-field{
+  width: 100%;
+  position: relative;
+}
+.form-field input{
+  padding: 0.4em 0.7em;
+}
+.form-field-label{
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  background-color:white;
+  font-size: 16px;
+  padding: 0 5px;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+.form-field:focus-within .form-field-label{
+  top: -11px;
+  font-size: 14px;
+}
+.form-field-label.value{
+  top: -11px;
+  font-size: 14px;
+}
 
 
 
