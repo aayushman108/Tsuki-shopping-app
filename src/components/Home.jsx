@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from '../data';
 import { modelItems } from '../data';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -176,28 +177,28 @@ const Home = () => {
       <div key={index} className="model-item">
         <img src={value} style={{height: "100%", width: "100%"}} alt="..." />
         <div className="insta-link" style={{}}>
-          <a href="#"><i class="bi bi-instagram" style={{fontSize: "18px", color: "white"}}></i></a>
+          <NavLink to="/"><i className="bi bi-instagram" style={{fontSize: "18px", color: "white"}}></i></NavLink>
         </div>
       </div>
       )}
     </div>
     <div className="features">
       <div className="feature-item">
-        <div style={{flexBasis: "8%", textAlign:"center"}}><i class="bi bi-star-fill"></i></div>
+        <div style={{flexBasis: "8%", textAlign:"center"}}><i className="bi bi-star-fill"></i></div>
         <div style={{flexBasis:"92%", paddingLeft:"5px"}}>
           <p style={{}}>THOUGHTFULLY DESIGNED</p>
           <p style={{marginBottom:"20px"}}>We design apparel and homeware that feature creative, fun designs for the daring individual.</p>
         </div>
       </div>
       <div className="feature-item">
-        <div style={{flexBasis: "8%", textAlign:"center"}}><i class="bi bi-tags-fill"></i></div>
+        <div style={{flexBasis: "8%", textAlign:"center"}}><i className="bi bi-tags-fill"></i></div>
         <div style={{flexBasis:"92%", paddingLeft:"5px"}}>
           <p style={{}}>ETHICALLY SOURCED</p>
           <p style={{marginBottom:"20px"}}>We ensure that all our products are sourced responsibly and made from excellent quality materials.</p>
         </div>
       </div>
       <div className="feature-item">
-        <div style={{flexBasis: "8%", textAlign:"center"}}><i class="bi bi-chat-right-quote-fill"></i></div>
+        <div style={{flexBasis: "8%", textAlign:"center"}}><i className="bi bi-chat-right-quote-fill"></i></div>
         <div style={{flexBasis:"92%", paddingLeft:"5px"}}>
           <p style={{}}>GET IN TOUCH</p>
           <p style={{marginBottom:"20px"}}>Do you have any questions? Please get in touch with us at any time and we'll be happy to assist you</p>
