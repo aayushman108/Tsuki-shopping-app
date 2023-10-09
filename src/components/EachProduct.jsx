@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const EachProduct = ({product}) => {
     const {name, image}= product;
@@ -7,7 +8,7 @@ const EachProduct = ({product}) => {
         <div className="sale-tag">SALE</div>
         <div className="accessories-image sale">
           <img src={image} alt="..." style={{width:"100%", height: "100%"}} />
-          <div className='quick-view'>QUICK VIEW</div>
+          <div className='quick-view'><NavLink to="">QUICK VIEW</NavLink></div>
         </div>
         <div className="item-description">
           <h6>{name}</h6>

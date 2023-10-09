@@ -19,11 +19,8 @@ const Footer = () => {
           <h5 style={{borderBottom:"1px solid white", paddingBottom: "20px", marginBottom: "20px"}}>GET SOCIAL WITH US</h5>
           <div style={{display: "flex", flexWrap: "wrap"}}>
             <NavLink to="/" style={{marginLeft:"0"}}><i className="bi bi-facebook" style={{fontSize: "18px"}}></i></NavLink>
-
             <NavLink to="/"><i className="bi bi-twitter"></i></NavLink>
-
             <NavLink to="/"><i className="bi bi-instagram"></i></NavLink>
-
             <NavLink to="/"><i className="bi bi-youtube"></i></NavLink>
           </div>
         </div>

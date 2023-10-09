@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from '../data';
@@ -6,10 +6,13 @@ import { modelItems } from '../data';
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <div>
-      <img src="/images/hero-image.png" width="100%" height="auto" alt='...' />
+      <img src="/images/h.jpg" width="100%" height="auto" alt='...' />
     </div>
     <h2 className="main-heading">Shop Accessories</h2>
     <div className='accessories'>
@@ -148,8 +151,8 @@ const Home = () => {
         </div>
       </Carousel>;
     </div>
-    <div className="offer" style={{}}>
-      <Carousel  infinite={true} showDots={true} autoPlay={true} autoPlaySpeed={2000} responsive={responsive}>
+    <div className="offer">
+      <Carousel  infinite={true} showDots={true} autoPlay={true} autoPlaySpeed={3000} responsive={responsive}>
         <div className='offer-item'>
           <div className='offer-image'>
             <img src="/images/offer2.jpg" style={{width: "100%", height: "100%"}} alt="..." />
@@ -157,7 +160,7 @@ const Home = () => {
           <div className='offer-card'>
             <h1 style={{textAlign:"center"}}>ALWAYS ETHICALLY SOURCED</h1>
             <p style={{textAlign:"center"}}>We ensure that all our products are sourced responsibly and made from excellent quality material</p>
-            <button>Shop now</button>
+            <button><NavLink to="/">READ MORE</NavLink></button>
           </div>
         </div>
         <div className='offer-item'>
@@ -167,7 +170,7 @@ const Home = () => {
           <div className='offer-card'>
             <h1 style={{textAlign:"center"}}>SOCK RESTOKE!</h1>
             <p style={{textAlign:"center"}}>Our two must-have Tsuki sock styles are black in stocks:</p>
-            <button>Shop now</button>
+            <button><NavLink to="/sale">SHOP NOW</NavLink></button>
           </div>
         </div>
       </Carousel>

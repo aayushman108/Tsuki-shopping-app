@@ -14,8 +14,10 @@ body {
 li{
   list-style-type: none;
 }
-
-/*...................header starts............................*/
+a{
+  text-decoration: none;
+}
+/*..................Header starts.....................*/
 
 .promo{
   font-size: 0.7em;
@@ -156,11 +158,18 @@ a{
   display: none;
 }
 
-.bi-list, .bi-x-lg{
+.bi-list{
   margin-left: 20px;
   color: black;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
+}
+.bi-x-lg{
+  margin-left: 20px;
+  font-size: 24px;
+}
+.bi-person-circle, .bi-cart-fill, .bi-search{
+  font-size: 24px;
 }
 
 .navlink{
@@ -180,17 +189,10 @@ a{
   display: inline-block;
   padding: 14px 5px 11px 5px;
 }
-/*
-.navlink li a{
-  text-decoration: none;
-  margin: 0 0 0 30px;
-  padding: 14px 5px;
-  font-size: 16px;
-}*/
 .v-navlink{
   display: none;
 }
-/*............................header ends..............................*/
+/*............................Header ends..............................*/
 
 /*..........................Home starts................................*/
 /*accessories*/
@@ -343,7 +345,7 @@ a{
 }
 .shop-the-look-image:hover .quick-view{
   line-height: 60px;
-  border: 1px solid black;
+  border-top: 1px solid black;
 }
 .shop-the-look-image{
   position: relative;
@@ -363,7 +365,26 @@ a{
 
 /*Offer*/
 .offer{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.offer-card button{
+  border: 1px solid black;
+  background: white;
+  padding: 13px 26px;
+  transition: all 0.4s ease;
+}
+.offer-card button:hover{
+  border: 1px solid black;
+  background: black;
+}
+.offer-card button a{
+  color: black;
+  font-size: 14px;
+  line-height: 20px;
+}
+.offer-card button:hover a{
+  color: white;
 }
 .offer-item{
   height: calc(9/24 * 100vw);
@@ -475,7 +496,7 @@ a{
   color: white;
 }
 /*.............................Home ends..........................*/
-/*............................Footer...............................*/
+/*............................Footer starts...............................*/
 .footer{
   width: 100%;
   background-color: black;
@@ -505,13 +526,91 @@ input{
   margin-right: 20px;
 }
 
-
 /*.....................Footer ends....................*/
 
-/*...................Media Query....................*/
+/*..................Login and Register starts.....................*/
+.box{
+  display: flex;
+  flex-wrap: wrap; 
+  height: 75vh; 
+  justify-content: center; 
+  flex-direction: column; 
+  align-items: center;
+  padding: 40px 20px;
+}
+.sub-box{
+  padding: 30px 0;
+  width: min(500px, 80vw);
+}
+.heading{
+  font-size: 27px;
+  font-weight: 400px;
+  line-height: 33px;
+  text-align: center;
+}
+.sub-heading{
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 24px;
+  text-align: center;
+}
+.input-fields{
+  display: inline-block;
+  width: min(500px, 80vw);
+}
+.input-fields button{
+  border:none;
+  background-color: #fc7cad;
+  color: white;
+  padding: 0.4em 1em;
+}
+.input-fields button:hover{
+  border:none;
+  background-color: #f9669e;
+  color: white;
+  padding: 0.4em 1em;
+}
+.input-fields button:disabled{
+  background-color: #f5e3ec;
+}
+.box a:hover{
+  color:#f5e3ec;
+}
+
+/*Input*/
+.form-field{
+  width: 100%;
+  position: relative;
+}
+.form-field input{
+  padding: 0.4em 0.7em;
+}
+.form-field-label{
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  background-color:white;
+  font-size: 16px;
+  padding: 0 5px;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+.form-field:focus-within .form-field-label{
+  top: -11px;
+  font-size: 14px;
+}
+.form-field-label.value{
+  top: -11px;
+  font-size: 14px;
+}
+/*..................Login and Register ends.....................*/
+
+/*......................................Media Query..................................*/
 
 @media screen and (max-width: 768px) {
-  /*Header*/
+
+  /*..........Header........*/
   .promo{
     display: none;
   }
@@ -541,10 +640,10 @@ input{
   .v-navlink{
     display: block;
     background-color: #f5e3ec;
-    padding: 15px 0;
   }
 
-  /*Home*/
+  /*...........Home..........*/
+  /*accessories*/
   .accessories{
     display: none;
   }
@@ -651,7 +750,7 @@ input{
     padding: 30px 20px 0 20px;
   }
   
-  /*Footer*/
+  /*............Footer............*/
   .footer{
     padding: 50px 30px 25px 30px;
   }
@@ -668,7 +767,7 @@ input{
 
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
-  /*Home*/
+  /*.............Home..............*/
   .offer-item{
     height: calc(11/24 * 100vw);
   }
@@ -690,14 +789,17 @@ input{
   .shop-the-look-item{
     min-height: calc(9/30 * 100vw);
   }
-  /*Footer*/
+  /*............Footer..............*/
   .footer{
     padding: 75px 30px 40px 30px;
   }
 }
 
+
+
 @media screen and (max-width: 620px) {
-  /*Home carousel*/
+  /*............Home............*/
+  /*carousel item*/
   .carousel-item{
     flex-direction: column;
     padding: 35px;
@@ -724,7 +826,7 @@ input{
   .shop-the-look-image{
     min-height: calc(9/17* 100vw);
   }
-  /*Home offer*/
+  /*offer*/
   .offer-item{
     height: calc(11/15 * 100vw);
   }
@@ -740,8 +842,12 @@ input{
     line-height: 19px;
   }
 }
+
+
+
 @media screen and (max-width: 420px) {
-  /*Home carousel*/
+  /*............Home..............*/
+  /*carousel*/
   .carousel-item{
     flex-direction: column;
     padding: 35px;
@@ -768,42 +874,13 @@ input{
   .shop-the-look-image{
     min-height: calc(9/13* 100vw);
   }
-  /*Home offer*/
+  /*offer*/
   .offer-item{
     height: calc(11/10 * 100vw);
   }
 
 }
 
-
-
-/*Form*/
-.form-field{
-  width: 100%;
-  position: relative;
-}
-.form-field input{
-  padding: 0.4em 0.7em;
-}
-.form-field-label{
-  display: block;
-  position: absolute;
-  top: 14px;
-  left: 8px;
-  background-color:white;
-  font-size: 16px;
-  padding: 0 5px;
-  z-index: 10;
-  transition: all 0.4s ease;
-}
-.form-field:focus-within .form-field-label{
-  top: -11px;
-  font-size: 14px;
-}
-.form-field-label.value{
-  top: -11px;
-  font-size: 14px;
-}
 
 
 
